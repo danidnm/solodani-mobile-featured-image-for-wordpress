@@ -25,24 +25,6 @@ Adds a second featured image field for posts and pages, specifically for mobile 
 
 ---
 
-## Usage
-
-```php
-echo get_mobile_featured_image();
-
-Or:
-
-```php
-
-<div class="mobile-only">
-    <?php echo get_mobile_featured_image(); ?>
-</div>
-<div class="desktop-only">
-    <?php the_post_thumbnail(); ?>
-</div>
-
----
-
 ## ❓ FAQ
 
 # Does it replace the default featured image?
@@ -54,12 +36,44 @@ Currently, only post and page are supported. Support for CPTs is planned.
 # Is it translatable?
 Yes. All labels are translatable using Loco Translate or .po/.mo files.
 
+---
+
 ## 📸 Screenshots
 
 
-🧩 Developer Helper
+---
 
-get_mobile_featured_image($post_id = null, $size = 'full');
+🧩 Usage / Developer Helper
+
+```php
+echo get_mobile_featured_image($size, $post_id);    // Both parameters are optional
+
+Or:
+
+```php
+echo the_mobile_featured_image($size, $post_id);    // Both parameters are optional
+
+Or:
+
+```php
+<div class="mobile-only">
+    <?php the_mobile_featured_image(); ?>
+</div>
+<div class="desktop-only">
+    <?php the_post_thumbnail(); ?>
+</div>
+
+Or:
+
+```php
+<div class="mobile-only">
+    <?php the_mobile_featured_image(); ?>
+</div>
+<div class="desktop-only">
+    <?php the_post_thumbnail(); ?>
+</div>
+
+---
 
 📦 Changelog
 
