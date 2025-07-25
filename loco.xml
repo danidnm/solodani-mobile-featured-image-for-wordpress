@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<bundle name="SoloDani Mobile Featured Image" min-version="1.0.0">
+  <domain name="solodani_mobile_featured_image">
+    <project name="SoloDani Mobile Featured Image" slug="solodani_mobile_featured_image">
+      <source>
+        <file>solodani-mobile-featured-image.php</file>
+      </source>
+      <target>
+        <directory>languages</directory>
+      </target>
+      <template>
+        <file>languages/solodani-mobile-featured-image.pot</file>
+      </template>
+    </project>
+  </domain>
+</bundle>

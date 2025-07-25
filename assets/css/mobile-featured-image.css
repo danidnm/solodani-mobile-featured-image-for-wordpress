@@ -1,0 +1,12 @@
+#solodani_mobile_featured_image .postbox-header h2,
+#solodani_mobile_featured_image .inside {
+    padding: 0 16px !important;
+}
+#solodani_mobile_featured_image .postbox-header .handle-actions .handle-order-higher,
+#solodani_mobile_featured_image .postbox-header .handle-actions .handle-order-lower {
+    display: none !important;
+}
+
+#solodani_mobile_featured_image #mobile-featured-image-container {
+    margin-bottom: 16px;
+}
