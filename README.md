@@ -1,40 +1,68 @@
-=== Mobile Featured Image ===
-Contributors: solodani
-Tags: featured image, mobile image, responsive, admin, metabox
-Requires at least: 5.0
-Tested up to: 6.5
-Requires PHP: 7.2
-Stable tag: 1.0.0
-License: GPLv2 or later
-License URI: https://www.gnu.org/licenses/gpl-2.0.html
+# 📱 Mobile Featured Image
 
 Adds a second featured image field for posts and pages, specifically for mobile display.
 
-== Description ==
+![Screenshot](https://your-screenshot-url.com/example.png) <!-- Replace with actual screenshot URL if available -->
 
-This plugin adds a new metabox to posts and pages in the WordPress admin that lets you choose a **second featured image**, intended to be used on **mobile devices**.
+---
 
-Useful when you want a vertical image for mobile and a horizontal one for desktop, or simply need more control over responsive visuals.
+## ✨ Features
 
-**Features:**
-
-- Adds a “Mobile Featured Image” metabox in the sidebar.
+- Adds a **"Mobile Featured Image"** metabox in the WordPress editor (sidebar).
 - Uses the native WordPress Media Library.
 - Stores the selected image as post meta.
-- Developer-friendly function to retrieve the image.
+- Helper function to retrieve the image in templates.
 - Lightweight and dependency-free.
 
-== Installation ==
+---
 
-1. Upload the plugin folder to `/wp-content/plugins/mobile-featured-image`, or install directly from the Plugins screen.
-2. Activate the plugin.
-3. Edit any post or page: you'll see a new **"Mobile Featured Image"** box in the sidebar.
-4. Use the helper function in your theme to display the image:
+## 🛠️ Installation
 
-== Usage ==
+1. Upload the plugin folder to `/wp-content/plugins/mobile-featured-image`, or install it via the WordPress dashboard.
+2. Activate the plugin from the **Plugins** menu.
+3. Edit any post or page — you'll see a new **"Mobile Featured Image"** metabox in the sidebar.
+4. Use the provided function in your theme to render the mobile image:
 
- In your theme, add_
+---
+
+## Usage
+
+```php
+echo get_mobile_featured_image();
+
+Or:
 
 ```php
 
-echo get_mobile_featured_image();
+<div class="mobile-only">
+    <?php echo get_mobile_featured_image(); ?>
+</div>
+<div class="desktop-only">
+    <?php the_post_thumbnail(); ?>
+</div>
+
+---
+
+## ❓ FAQ
+
+# Does it replace the default featured image?
+No. It adds a second, independent image. You control how it’s displayed in your theme.
+
+# Can I use it with custom post types?
+Currently, only post and page are supported. Support for CPTs is planned.
+
+# Is it translatable?
+Yes. All labels are translatable using Loco Translate or .po/.mo files.
+
+## 📸 Screenshots
+
+
+🧩 Developer Helper
+
+get_mobile_featured_image($post_id = null, $size = 'full');
+
+📦 Changelog
+
+1.0.0
+Initial release: adds metabox, media uploader integration, save logic, and helper function.
+
