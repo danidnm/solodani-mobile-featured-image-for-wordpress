@@ -30,6 +30,7 @@ Yes. All labels are translatable using Loco Translate or .po/.mo files.
 
 ## 📸 Screenshots
 
+![Mobile featured image metabox](https://github.com/danidnm/solodani-mobile-featured-image-for-wordpress/blob/master/docs/images/featured-mobile-image.jpg?raw=true)
 
 ## 🧩 Usage / Developer Helper
 
