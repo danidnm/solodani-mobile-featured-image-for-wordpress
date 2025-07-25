@@ -2,10 +2,6 @@
 
 Adds a second featured image field for posts and pages, specifically for mobile display.
 
-![Screenshot](https://your-screenshot-url.com/example.png) <!-- Replace with actual screenshot URL if available -->
-
----
-
 ## ✨ Features
 
 - Adds a **"Mobile Featured Image"** metabox in the WordPress editor (sidebar).
@@ -14,8 +10,6 @@ Adds a second featured image field for posts and pages, specifically for mobile 
 - Helper function to retrieve the image in templates.
 - Lightweight and dependency-free.
 
----
-
 ## 🛠️ Installation
 
 1. Upload the plugin folder to `/wp-content/plugins/mobile-featured-image`, or install it via the WordPress dashboard.
@@ -23,45 +17,55 @@ Adds a second featured image field for posts and pages, specifically for mobile 
 3. Edit any post or page — you'll see a new **"Mobile Featured Image"** metabox in the sidebar.
 4. Use the provided function in your theme to render the mobile image:
 
----
-
-## Usage
-
-```php
-echo get_mobile_featured_image();
-
-Or:
-
-```php
-
-<div class="mobile-only">
-    <?php echo get_mobile_featured_image(); ?>
-</div>
-<div class="desktop-only">
-    <?php the_post_thumbnail(); ?>
-</div>
-
----
-
 ## ❓ FAQ
 
-# Does it replace the default featured image?
+### Does it replace the default featured image?
 No. It adds a second, independent image. You control how it’s displayed in your theme.
 
-# Can I use it with custom post types?
+### Can I use it with custom post types?
 Currently, only post and page are supported. Support for CPTs is planned.
 
-# Is it translatable?
+### Is it translatable?
 Yes. All labels are translatable using Loco Translate or .po/.mo files.
 
 ## 📸 Screenshots
 
 
-🧩 Developer Helper
+## 🧩 Usage / Developer Helper
 
-get_mobile_featured_image($post_id = null, $size = 'full');
+```php
+echo get_mobile_featured_image($size, $post_id);    // Both parameters are optional
+```
 
-📦 Changelog
+Or:
+
+```php
+echo the_mobile_featured_image($size, $post_id);    // Both parameters are optional
+```
+
+Or:
+
+```php
+<div class="mobile-only">
+    <?php the_mobile_featured_image(); ?>
+</div>
+<div class="desktop-only">
+    <?php the_post_thumbnail(); ?>
+</div>
+```
+
+Or:
+
+```php
+<div class="mobile-only">
+    <?php the_mobile_featured_image(); ?>
+</div>
+<div class="desktop-only">
+    <?php the_post_thumbnail(); ?>
+</div>
+```
+
+## 📦 Changelog
 
 1.0.0
 Initial release: adds metabox, media uploader integration, save logic, and helper function.
