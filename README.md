@@ -2,8 +2,6 @@
 
 Adds a second featured image field for posts and pages, specifically for mobile display.
 
-![Screenshot](https://your-screenshot-url.com/example.png) <!-- Replace with actual screenshot URL if available -->
-
 ---
 
 ## ✨ Features
@@ -30,10 +28,10 @@ Adds a second featured image field for posts and pages, specifically for mobile 
 # Does it replace the default featured image?
 No. It adds a second, independent image. You control how it’s displayed in your theme.
 
-# Can I use it with custom post types?
+### Can I use it with custom post types?
 Currently, only post and page are supported. Support for CPTs is planned.
 
-# Is it translatable?
+### Is it translatable?
 Yes. All labels are translatable using Loco Translate or .po/.mo files.
 
 ---
