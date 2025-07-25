@@ -35,11 +35,13 @@ Yes. All labels are translatable using Loco Translate or .po/.mo files.
 
 ```php
 echo get_mobile_featured_image($size, $post_id);    // Both parameters are optional
+```
 
 Or:
 
 ```php
 echo the_mobile_featured_image($size, $post_id);    // Both parameters are optional
+```
 
 Or:
 
@@ -50,6 +52,7 @@ Or:
 <div class="desktop-only">
     <?php the_post_thumbnail(); ?>
 </div>
+```
 
 Or:
 
@@ -60,6 +63,7 @@ Or:
 <div class="desktop-only">
     <?php the_post_thumbnail(); ?>
 </div>
+```
 
 ## 📦 Changelog
 
